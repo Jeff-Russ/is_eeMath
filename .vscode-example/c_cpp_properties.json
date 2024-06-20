@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                // "${workspaceFolder}/Arduino_dummy", // not needed as "${workspaceFolder}/**" covers this?
+
+                // these: 
+                // "~/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
+                // "~/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/micro",
+                // or this:
+                // "~/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/**",
+
+                "~/Documents/Arduino/libraries/**"
+            ],
+            // "browse": {
+            //     "path": [
+            //         "~/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/cores/arduino",
+            //         "~/Library/Arduino15/packages/arduino/hardware/avr/1.8.6/variants/micro",
+            //         "~/Documents/Arduino/libraries"
+            //     ],
+            //     "limitSymbolsToIncludedHeaders": true
+            // },
+            "defines": [
+                "ARDUINO=20302",  // Updated version to reflect Arduino IDE 2.3.2
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO_AVR_MICRO"
+            ],
+            "macFrameworkPath": [
+                "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+                // "/System/Library/Frameworks", // prev: "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
+                // "/Library/Frameworks" // prev not here
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11", // previously "c17"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64"
+        }
+    ],
+    "version": 4
+}
+
+// ~/.platformio/packages/framework-arduino-avr/cores/arduino/Arduino.h
